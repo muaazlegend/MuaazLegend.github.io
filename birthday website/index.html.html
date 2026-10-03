@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Rameen 💖</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Pacifico&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    font-family: 'Poppins', sans-serif;
+    color: white;
+
+    background:
+        radial-gradient(circle at 20% 20%, #ff8fc7, transparent 30%),
+        radial-gradient(circle at 80% 80%, #8d70ff, transparent 30%),
+        linear-gradient(135deg, #ff4f9a, #9b5de5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px 15px;
+}
+
+/* MAIN CARD */
+
+.card {
+    position: relative;
+
+    width: 100%;
+    max-width: 620px;
+
+    padding: 35px 22px 40px;
+
+    text-align: center;
+
+    border-radius: 35px;
+
+    background: rgba(255,255,255,0.14);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255,255,255,0.3);
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,0.3),
+        inset 0 0 30px rgba(255,255,255,0.08);
+
+    z-index: 10;
+}
+
+/* TOP TEXT */
+
+.top {
+    font-size: 13px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+/* CAKE */
+
+.cake {
+    font-size: 85px;
+
+    margin: 15px 0;
+
+    display: inline-block;
+
+    animation: cake 2s infinite ease-in-out;
+}
+
+@keyframes cake {
+
+    0%,100% {
+        transform: translateY(0) rotate(0);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(3deg);
+    }
+}
+
+/* HEADING */
+
+h1 {
+    font-family: 'Pacifico', cursive;
+
+    font-size: clamp(38px, 10vw, 65px);
+
+    text-shadow:
+        0 5px 20px rgba(0,0,0,0.25);
+}
+
+.name {
+    font-family: 'Dancing Script', cursive;
+
+    font-size: clamp(50px, 13vw, 78px);
+
+    font-weight: 700;
+
+    margin-top: 5px;
+
+    text-shadow:
+        0 0 10px white,
+        0 0 30px #ffb6dc;
+}
+
+.subtitle {
+    margin-top: 10px;
+
+    font-size: 16px;
+}
+
+/* PHOTO */
+
+.photo-frame {
+    width: 190px;
+    height: 190px;
+
+    margin: 25px auto;
+
+    padding: 6px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            white,
+            #ff72b6,
+            #9d72ff,
+            white
+        );
+
+    box-shadow:
+        0 0 25px rgba(255,255,255,0.6),
+        0 10px 30px rgba(0,0,0,0.3);
+
+    animation: photoGlow 3s infinite alternate;
+}
+
+@keyframes photoGlow {
+
+    from {
+        box-shadow:
+            0 0 15px rgba(255,255,255,0.4);
+    }
+
+    to {
+        box-shadow:
+            0 0 40px rgba(255,255,255,0.8);
+    }
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.2);
+}
+
+/*
+IMPORTANT:
+Put your photo file in the same folder
+and name it:
+
+rameen.jpg
+*/
+
+.message {
+    font-family: 'Dancing Script', cursive;
+
+    font-size: 24px;
+
+    line-height: 1.6;
+
+    margin: 25px auto;
+
+    max-width: 530px;
+}
+
+/* BUTTON */
+
+button {
+    border: none;
+
+    padding: 15px 28px;
+
+    border-radius: 50px;
+
+    background: white;
+
+    color: #d63384;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.25);
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+/* SURPRISE */
+
+#surprise {
+    display: none;
+
+    margin-top: 30px;
+
+    animation: reveal 1s ease;
+}
+
+#surprise h2 {
+    font-family: 'Dancing Script', cursive;
+
+    font-size: 38px;
+
+    margin-bottom: 15px;
+}
+
+#surprise p {
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+@keyframes reveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* MUSIC */
+
+.music {
+    margin-top: 25px;
+}
+
+.music p {
+    font-size: 13px;
+    opacity: .8;
+}
+
+/* FLOATING HEARTS */
+
+.heart {
+    position: fixed;
+
+    bottom: -50px;
+
+    pointer-events: none;
+
+    z-index: 2;
+
+    animation: floatHeart linear forwards;
+}
+
+@keyframes floatHeart {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0)
+            scale(.6);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(-110vh)
+            rotate(360deg)
+            scale(1.4);
+
+        opacity: 0;
+    }
+}
+
+/* BALLOONS */
+
+.balloon {
+    position: fixed;
+
+    bottom: -120px;
+
+    font-size: 65px;
+
+    z-index: 1;
+
+    animation: balloon 10s linear infinite;
+}
+
+@keyframes balloon {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-120vh) rotate(15deg);
+    }
+}
+
+.b1 {
+    left: 5%;
+}
+
+.b2 {
+    left: 25%;
+    animation-delay: 2s;
+}
+
+.b3 {
+    left: 50%;
+    animation-delay: 4s;
+}
+
+.b4 {
+    left: 75%;
+    animation-delay: 1s;
+}
+
+.b5 {
+    left: 90%;
+    animation-delay: 5s;
+}
+
+/* FOOTER */
+
+.footer {
+    margin-top: 30px;
+
+    font-size: 12px;
+
+    opacity: .7;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- BALLOONS -->
+
+<div class="balloon b1">🎈</div>
+<div class="balloon b2">🎈</div>
+<div class="balloon b3">🎈</div>
+<div class="balloon b4">🎈</div>
+<div class="balloon b5">🎈</div>
+<div class="balloon b6">🎈</div>
+<div class="balloon b7">🎈</div>
+
+
+<!-- MAIN CARD -->
+
+<div class="card">
+
+    <div class="top">
+        A little surprise for you ✨
+    </div>
+
+
+    <div class="cake">
+        🎂
+    </div>
+
+
+    <h1>
+        Happy Birthday
+    </h1>
+
+
+    <div class="name">
+        Rameen naeem 💖
+    </div>
+
+
+    <div class="subtitle">
+        🌸 Today is all about you 🌸
+    </div>
+
+
+    <!-- PHOTO -->
+
+    <div class="photo-frame">
+
+        <img
+            src="rameen.jpg"
+            alt="Rameen"
+        >
+
+    </div>
+
+
+    <!-- MESSAGE -->
+
+    <div class="message">
+
+        💕 Today is a very special day...
+
+        <br><br>
+
+        Because someone incredibly special
+        was born today. 🌷✨
+
+        <br><br>
+
+        May Allah bless your life with
+        happiness, peace, success and
+        countless beautiful moments with me. 🤍
+
+    </div>
+
+
+    <!-- SURPRISE BUTTON -->
+
+    <button onclick="openSurprise()">
+
+        🎁 Open Your Surprise 💝
+
+    </button>
+
+
+    <!-- HIDDEN SURPRISE -->
+
+    <div id="surprise">
+
+        <h2>
+            Surprise, Rameen! 🥹💖
+        </h2>
+
+        <p>
+
+            🌸 I hope this little website
+            makes you smile today.
+
+            <br><br>
+
+            You deserve a birthday filled
+            with happiness, laughter,
+            beautiful memories and
+            lots of love from me. ✨
+
+            <br><br>
+
+            May every new chapter of your
+            life be more beautiful than
+            the last one. 🌷
+
+            <br><br>
+
+            🎂 Happy Birthday, Mari jaan Mari zindgi! 🎂
+
+            <br><br>
+
+            Keep smiling always. 💖
+
+            <br><br>
+
+            🫶 💕 ✨ 🌸 ✨ 💕 🫶
+
+        </p>
+
+    </div>
+
+
+    <!-- MUSIC -->
+
+    <div class="music">
+
+        <p>
+            🎵 Tap below for birthday music
+        </p>
+
+        <br>
+
+        <audio
+            id="birthdayMusic"
+            controls
+            loop
+        >
+
+            <source
+                src="birthday.mp3"
+                type="audio/mpeg"
+            >
+
+        </audio>
+
+    </div>
+
+
+    <div class="footer">
+
+        Made with ❤️ specially for Rameen
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* SURPRISE */
+
+function openSurprise() {
+
+    document.getElementById("surprise").style.display = "block";
+
+    createConfetti();
+
+    for(let i = 0; i < 35; i++) {
+        createHeart();
+    }
+
+}
+
+
+/* HEARTS */
+
+function createHeart() {
+
+    const hearts = [
+        "❤️",
+        "💖",
+        "💕",
+        "💗",
+        "💓",
+        "💜",
+        "💙",
+        "🌸",
+        "✨"
+    ];
+
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+
+    heart.innerHTML =
+        hearts[Math.floor(Math.random() * hearts.length)];
+
+    heart.style.left =
+        Math.random() * 100 + "vw";
+
+    heart.style.fontSize =
+        (18 + Math.random() * 30) + "px";
+
+    heart.style.animationDuration =
+        (5 + Math.random() * 5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 10000);
+}
+
+
+/* CONSTANT HEARTS */
+
+setInterval(createHeart, 700);
+
+
+/* CONFETTI */
+
+function createConfetti() {
+
+    const emojis = [
+        "🎉",
+        "🎊",
+        "✨",
+        "💖",
+        "💕",
+        "🌸",
+        "🥳",
+        "⭐"
+    ];
+
+    for(let i = 0; i < 80; i++) {
+
+        const piece =
+            document.createElement("div");
+
+        piece.innerHTML =
+            emojis[
+                Math.floor(
+                    Math.random() * emojis.length
+                )
+            ];
+
+        piece.style.position = "fixed";
+
+        piece.style.left =
+            Math.random() * 100 + "vw";
+
+        piece.style.top = "-30px";
+
+        piece.style.fontSize =
+            (15 + Math.random() * 25) + "px";
+
+        piece.style.zIndex = "1000";
+
+        document.body.appendChild(piece);
+
+        const duration =
+            2000 + Math.random() * 3000;
+
+        piece.animate(
+            [
+                {
+                    transform:
+                        "translateY(0) rotate(0deg)"
+                },
+                {
+                    transform:
+                        "translateY(110vh) rotate(720deg)"
+                }
+            ],
+            {
+                duration: duration,
+                easing: "linear"
+            }
+        );
+
+        setTimeout(() => {
+            piece.remove();
+        }, duration);
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
