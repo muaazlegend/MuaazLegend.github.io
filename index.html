@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Birthday Surprise ✨</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="sparkles"></div>
+
+<header class="topbar">
+  <span>×</span><small>Birthday Surprise</small><span>◌</span>
+</header>
+
+<main id="app">
+  <section class="screen active" id="s1">
+    <button class="back">← Back to surprise</button>
+    <div class="hero">
+      <div class="eyebrow">✨ Something special, just for you ✨</div>
+      <h1>A surprise awaits you... 🎁</h1>
+      <p class="sub">Open the gift to begin your birthday journey.</p>
+      <button class="gift" onclick="go(2)" aria-label="Open gift">
+        <span>🎁</span>
+      </button>
+      <p class="hint">Tap the gift to open 💛</p>
+    </div>
+  </section>
+
+  <section class="screen" id="s2">
+    <button class="back" onclick="go(1)">← Back</button>
+    <div class="card lock">
+      <div class="timer">18:36</div>
+      <div class="tiny">Birthday Surprise 💕</div>
+      <div class="lockicon">🔒</div>
+      <h2>Enter the secret code 💗</h2>
+      <div class="dots" id="dots">○ ○ ○ ○</div>
+      <div class="keypad">
+        <button onclick="key(1)">1</button><button onclick="key(2)">2</button><button onclick="key(3)">3</button>
+        <button onclick="key(4)">4</button><button onclick="key(5)">5</button><button onclick="key(6)">6</button>
+        <button onclick="key(7)">7</button><button onclick="key(8)">8</button><button onclick="key(9)">9</button>
+        <button class="empty"></button><button onclick="key(0)">0</button><button onclick="backspace()">⌫</button>
+      </div>
+      <p class="error" id="error"></p>
+    </div>
+  </section>
+
+  <section class="screen" id="s3">
+    <div class="hero">
+      <div class="round">🧸</div>
+      <h2>There's something<br><span>special</span> I want to tell you...</h2>
+      <p class="sub">I made something special for you...</p>
+      <button class="continue" onclick="go(4)">Continue →</button>
+    </div>
+  </section>
+
+  <section class="screen" id="s4">
+    <div class="hero">
+      <h1>Happy Birthday <span id="name1">Rameen</span> 🎂</h1>
+      <p>The world has been better since ❤️</p>
+      <div class="stats">
+        <div><b>17</b><small>YEARS</small></div>
+        <div><b>6,208</b><small>DAYS</small></div>
+        <div><b>149,011</b><small>HOURS</small></div>
+        <div><b>8,940,660</b><small>MINUTES</small></div>
+      </div>
+      <div class="cake" onclick="blowCandles()">🎂<div class="flame">🕯️ 1 7 🕯️</div></div>
+      <p class="hint">Tap the cake to blow the candles 🕯️</p>
+      <button class="continue hidden" id="afterCake" onclick="go(5)">Continue →</button>
+    </div>
+  </section>
+
+  <section class="screen" id="s5">
+    <div class="hero">
+      <h2>Pop the Wishes 🎈</h2>
+      <p class="sub">Tap each balloon to reveal a little wish</p>
+      <div class="balloons">
+        <button onclick="pop(this,'You deserve every beautiful thing 💛')">🎈</button>
+        <button onclick="pop(this,'May your smile stay forever ✨')">🎈</button>
+        <button onclick="pop(this,'I hope all your dreams come true 🌙')">🎈</button>
+        <button onclick="pop(this,'You make ordinary days special 💕')">🎈</button>
+        <button onclick="pop(this,'Keep shining, birthday girl 🌟')">🎈</button>
+        <button onclick="pop(this,'Today is all about YOU! 🎂')">🎈</button>
+      </div>
+      <p id="wishCount">Popped 0/6</p>
+      <div class="wishbox" id="wishbox">Tap a balloon 💗</div>
+      <button class="continue hidden" id="afterBalloons" onclick="go(6)">Continue →</button>
+    </div>
+  </section>
+
+  <section class="screen" id="s6">
+    <div class="hero">
+      <h2>One Last Surprise ✨</h2>
+      <p class="sub">Scratch the golden card to reveal it</p>
+      <div class="scratch" onclick="revealScratch(this)">
+        <div class="scratchcover">✨ Scratch / tap ✨</div>
+        <div class="scratchtext">Happy Birthday! 🎉<br><small>You found the hidden surprise 💖</small></div>
+      </div>
+      <button class="continue hidden" id="afterScratch" onclick="go(7)">Open my letter 💌</button>
+    </div>
+  </section>
+
+  <section class="screen" id="s7">
+    <div class="hero letter-page">
+      <div class="envelope">💌</div>
+      <h2>A Letter Just For You</h2>
+      <div class="letter">
+        <div class="script">My jaan,</div>
+        <p>On this very special day, I want you to know how deeply special you are to me. Your smile makes my day brighter, and your presence makes even simple moments feel beautiful.</p>
+        <p>I hope this new year of your life brings you endless happiness, peaceful moments, big dreams, and all the love your heart can hold.</p>
+        <p>Never forget how precious you are. Keep smiling, keep shining, and always remember that you deserve the very best.</p>
+        <div class="script">Happy Birthday, my love! ❤️</div>
+      </div>
+      <button class="continue" onclick="go(1)">↻ Watch it again</button>
+    </div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
